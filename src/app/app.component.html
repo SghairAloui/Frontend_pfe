@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav *ngIf="showNavbar" class="navbar navbar-expand navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">BeeOrganize</a>
 
@@ -12,17 +12,15 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about" data-after="About">About</a>
-
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" data-after="About">Contact</a>        </li>
-     
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" data-after="About">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact" data-after="About">Contact</a>
+      </li>
     </ul>
   </div>
 </nav>
-
 
 <router-outlet></router-outlet>

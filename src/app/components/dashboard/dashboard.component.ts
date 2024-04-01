@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { JwtService } from 'src/app/service/jwt.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { JwtService } from 'src/app/service/jwt.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  isSidebarOpen: boolean = false;
 
   message : string;
   constructor(
@@ -16,6 +17,14 @@ export class DashboardComponent {
   ngOnInit() {
     this.success();
   }
+
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+    console.log('vbvv')
+  }
+
+ 
 
   success() {
     this.service.success().subscribe(

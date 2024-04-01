@@ -1,7 +1,5 @@
 /* register.component.scss */
 
-
-
 .form-group {
     margin-bottom: 20px;
 
@@ -19,9 +17,9 @@
     }
 
     input:focus {
-        border-color: #80bdff;
+        border-color: crimson;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        box-shadow: 0 0 0 0.2rem rgb(243, 160, 176);
     }
 
     .text-danger {
@@ -38,19 +36,19 @@ button {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: rgb(220, 82, 109);
+    border-color: rgb(220, 82, 109);
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: crimson;
+    border-color: crimson;
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled {
-    background-color: #b3d7ff;
-    border-color: #b3d7ff;
+    background-color: rgb(241, 175, 188);
+    border-color: rgb(241, 175, 188);
 }
 
 
@@ -209,4 +207,20 @@ span a:hover{
         max-width:420px;
         width: 100%;
     }
+}
+
+.section-title .h3 {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+a {
+    color : crimson;
 }

@@ -15,6 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 
@@ -36,7 +38,7 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatSidenavModule,MatListModule
+    MatSidenavModule,MatListModule,MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

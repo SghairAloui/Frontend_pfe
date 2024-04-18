@@ -30,9 +30,12 @@
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    cursor: pointer;
   }
   
   .nav-link:hover {
     color: crimson;
+    cursor: pointer;
+
   }
   

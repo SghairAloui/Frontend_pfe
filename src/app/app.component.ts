@@ -17,4 +17,22 @@ export class AppComponent {
       this.showNavbar = event.url === '/home'; // Check if the current route is '/home'
     });
   }
+
+  menuCheckBox: boolean = false; // Declare menuCheckBox property
+
+  toAboutSection() {
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+      this.menuCheckBox = false;
+  }
+
+  toContactSection() {
+    const aboutSection = document.getElementById("contact");
+    if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+    this.menuCheckBox = false;
+}
 }

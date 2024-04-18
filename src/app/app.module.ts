@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'
+import { IonicModule } from '@ionic/angular'; // Importation du module IonicModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    MatSidenavModule,MatListModule,MatFormFieldModule
+    MatSidenavModule,MatListModule,MatFormFieldModule,    IonicModule.forRoot() // Ajout de IonicModule.forRoot() dans les imports
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,6 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   redirectToLogin() {
-    // Redirect to the login page
     this.router.navigate(['/login']); 
   
 }

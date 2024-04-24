@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { JwtService } from 'src/app/service/jwt.service';
 
 @Component({
@@ -10,12 +11,16 @@ import { JwtService } from 'src/app/service/jwt.service';
 })
 export class LoginComponent implements OnInit {
 
+  forgotEmail: string = ''; // Declare the forgotEmail property
+  showForgotPasswordForm: boolean = false; // Declare the showForgotPasswordForm property
+
   loginForm!: FormGroup ;
 
   constructor(
     private service: JwtService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -34,8 +39,30 @@ export class LoginComponent implements OnInit {
           const jwtToken = response.jwtToken;
           localStorage.setItem('jwt', jwtToken);
           this.router.navigateByUrl("/dashboard"); // Navigate to dashboard route
+          this.toastr.success('Login is successfully', '', {
+            timeOut: 5000,
+            positionClass: 'toast-bottom-left'
+          });
+        } else {
+          this.toastr.warning('Login failed. Please check your credentials.', '', {
+            timeOut: 5000,
+            positionClass: 'toast-bottom-left'
+          });
         }
+      },
+      (error) => {
+        console.error(error); // Log the error for debugging purposes
+        this.toastr.error('Your information is not valide.', '', {
+          timeOut: 5000,
+          positionClass: 'toast-bottom-left'
+        });
       }
-    )
+    );
   }
-}
+
+  submitForgotPasswordForm() {
+    // Handle forgot password form submission
+  }
+  
+
+}  

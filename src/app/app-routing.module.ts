@@ -12,7 +12,9 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "dashboard", component: DashboardComponent }, 
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirection par défaut vers login
-  { path: '**', redirectTo: 'home', pathMatch: 'full' } // Redirection pour tout autre chemin non défini
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },// Redirection pour tout autre chemin non défini
+
+  
 
 
 

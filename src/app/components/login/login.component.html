@@ -13,12 +13,13 @@
                 
                 <div class="input-box">
 
-                    <div>
-                        <header>
-                            <h3> <b class="section-title">Access <span>To</span> your <span>Account</span></b></h3>
-                        </header>
-                      </div>    
-    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+                       
+    <form *ngIf="!showForgotPasswordForm; else forgotPasswordForm" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <div>
+            <header>
+                <h3> <b class="section-title">Access <span>To</span> your <span>Account</span></b></h3>
+            </header>
+          </div>  
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" formControlName="email" />
@@ -30,12 +31,39 @@
         </div>
 
         <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+        <br><br>
+        <div class="forgot-password">
+            <a (click)="showForgotPasswordForm = true" class="forgot">Forgot Password?</a>
+        </div>
 
         <div class="signin">
             <h5>Already have an account?</h5> <h5><a [routerLink]="['/register']"><b>SignUp</b></a></h5>
            </div>
            
     </form>
+
+        <!-- Forgot Password Form -->
+        <ng-template #forgotPasswordForm>
+            <form *ngIf="showForgotPasswordForm" (ngSubmit)="submitForgotPasswordForm()">
+                <div>
+                    <header>
+                        <h3> <b class="section-title">Change <span>Your</span> Password </b></h3>
+                    </header>
+                  </div>
+                <!-- Your forgot password form content here -->
+                <!-- Example: -->
+                <div class="form-group">
+                    <label for="forgotEmail">Gmail</label>
+                    <input type="email" class="form-control" id="forgotEmail" [(ngModel)]="forgotEmail" name="forgotEmail" />
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br><br>
+                <div class="forgot-password">
+                    <a (click)="showForgotPasswordForm = false" class="forgot">Cancel</a>
+                </div>           
+             </form>
+        </ng-template>
 </div>
 
 

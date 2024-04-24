@@ -1,7 +1,11 @@
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
-  }
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed; /* Add this line */
+  width: 100%; /* Add this line to make it full width */
+  top: 0; /* Add this line to stick it to the top */
+  z-index: 1000; /* Add this line to ensure it's above other elements */
+}
   
   .container {
     display: flex;

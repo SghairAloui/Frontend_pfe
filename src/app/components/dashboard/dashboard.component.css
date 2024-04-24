@@ -87,6 +87,7 @@ body {
     line-height: 50px;
 }
 */
+
 .list-item{
     list-style: none;
     width: 100%;
@@ -102,11 +103,7 @@ body {
     text-decoration: none;
     border-radius: 6px;
 }
-.list-item.active a,
-.list-item a:hover{
-    background: rgba(255, 255, 255, .2);
 
-}
 .list-item a i {
     min-width: 50px;
     height: 50px;
@@ -166,8 +163,8 @@ td {
 .side-menu {
     position: fixed;
     background: crimson;
-    width: 20vw;
-    min-height: 100vh;
+    width: 17vw;
+    min-height: 500vh;
     display: flex;
     flex-direction: column;
 }
@@ -186,8 +183,9 @@ td {
     align-items: center;
 }
 .side-menu li:hover {
-    background: white;
+    background: black;
     color: crimson;
+    cursor: pointer;
 }
 .container {
     position: absolute;
@@ -290,7 +288,7 @@ td {
     flex-wrap: wrap;
 }
 .container .content .content-2 .recent-payments {
-    min-height: 50vh;
+    min-height: 57vh;
     flex: 5;
     background: white;
     margin: 0 25px 25px 25px;
@@ -301,7 +299,7 @@ td {
 .container .content .content-2 .new-students {
     flex: 2;
     background: white;
-    min-height: 50vh;
+    min-height: 57vh;
     margin: 0 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;

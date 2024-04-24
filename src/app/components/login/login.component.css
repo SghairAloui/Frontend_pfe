@@ -228,3 +228,11 @@ span a:hover{
 a {
     color : crimson;
 }
+
+.forgot-password {
+    text-align: center;
+}
+
+.forgot {
+    cursor: pointer;
+}
